@@ -39,12 +39,18 @@ Technologies Used
 Contact form
 Community programs section
 Mobile-friendly layout
-Clean and readable interface
+Responsive images
+ Clean typography
+Multi-device compatibility
+External CSS stylesheet
+Interactive hover effects
 
 
 Design and User Experience
 Colour Scheme:
 Green 
+Brown
+Orange
 White
 These colours represent growth, hope, and community.
 Typography:
@@ -55,6 +61,59 @@ User Experience:
 Responsive layout
 Clear call-to-action buttons
 Simple and accessible design
+
+CSS Styling and Responsive Design
+External Stylesheet:
+An external stylesheet (style.css) was created and linked to all HTML pages to ensure consistency across the website.
+
+Base Styling
+The website includes:
+Consistent font styling
+Standard spacing and padding
+Green and white colour palette
+
+Responsive layout structure:
+Typography
+Typography styling includes:
+Font-family
+Font-size
+Font-weight
+Line-height
+Letter spacing
+
+Layout Structure:
+CSS Flex box was used to:
+Structure navigation menus
+Align page content
+Improve responsiveness
+
+Visual Styling:
+The following CSS properties were used:
+Background-color
+Color
+Border
+Box-shadow
+Hover effects
+
+Responsive Design:
+Breakpoints
+Media queries were implemented for:
+Desktop
+Tablet
+Mobile devices
+
+Responsive Features:
+Flexible layouts
+Responsive navigation
+Relative units (%, rem, em)
+Responsive images
+Mobile-friendly spacing
+
+Testing
+The website was tested on:
+Mobile devices
+Tablets
+Desktop browsers
 
 
 Timeline and Milestones
@@ -77,6 +136,14 @@ Version 1.1
 Improved layout responsiveness
 Version 1.2
 Added forms and JavaScript functionality
+Version 1.2
+Added responsive design
+Implemented media queries
+Improved mobile responsiveness
+Version 1.3
+Added hover effects
+Improved typography
+Updated spacing and layout
 
 References
 W3Schools. (2026). Available at: https://www.w3schools.com/
