@@ -1,12 +1,14 @@
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: white;
-    color: #333;
+    background-color: rgb(33, 13, 13);
+    color: rgb(238, 157, 7);
 
 }
 
-header{
+header
+{
     background-color: green;
     color:white;
     padding: 20px;
@@ -18,7 +20,7 @@ header h1{
     margin-bottom: 15px;
 }
 
-nav ul{
+nav {
     background-color: darkgreen;
     padding: 15px;
 }
@@ -27,7 +29,7 @@ nav ul{
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px
+    gap: 30px
 }
 
 nav ul li a{
@@ -46,7 +48,7 @@ main{
 }
 
 section {
-    background-color: white;
+    background-color: rgba(14, 9, 9, 0.84);
     margin-bottom: 20px;
     padding: 25px;
     border-radius: 10px;
@@ -63,7 +65,10 @@ p{
     margin-bottom: 15px;
 
 }
-
+ button,
+ a{
+    transition: 0.3s;
+ }
 button{
     background-color: green;
     color: white;
@@ -75,4 +80,85 @@ button{
 
 button:hover{
     background-color: darkgreen;
+}
+ form{
+    margin-top: 20px;
+ }
+
+ input,
+ textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ }
+
+ textarea{
+    resize: vertical;
+    min-height: 120px;
+ }
+footer{
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.responsive-image{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.image-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px){
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+main{
+    padding: 20px;
+}
+
+section{
+    padding: 20px;
+}
+
+@media (max-width: 480px){
+    header h1{
+        font-size: 24px;
+    }
+
+    nav ul{
+        
+        gap: 10px;
+    }
+
+    section{
+        padding: 15px;
+    }
+
+    button{
+    width: 100%;
+    }
 }
