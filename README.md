@@ -164,11 +164,14 @@ SEO Ehnancements
 Improved user interaction and accessibility
 
 References
-W3Schools. (2026). Available at: https://www.w3schools.com/
+Mozilla Developer Network (2026).HTML Forms. Available at: https://developer.mozilla.org
+W3Schools. (2026). JavaScript Validation. Available at: https://www.w3schools.com/
 MDN Web Docs. (2026). Available at: https://developer.mozilla.org/
 Unsplash. (2026). Available at: https://unsplash.com/
 Google Fonts. (2026). Available at: https://fonts.google.com/
 Font Awesome. (2026). Available at: https://fontawesome.com/
+ Google Search Central (2026) SEO StarterGuide. Available at: https://developers.google.com/search
+
 
 
 GitHub Repository
