@@ -150,15 +150,17 @@ Version 1.4
 Improved user interaction through DOM manipulation and dynamic content rendering
 
 Version 2.0
-Ehnancements
+SEO Ehnancements
 Added JavaScript from validation
 Added enquiry form
 Added search functionality
 Added responsive image gallery
 Added SEO meta tags
-Added robots.txt
-Added sitemap.xml
+Added key optimisation
+Created robots.txt file
+Created sitemap.xml file
 Enabled Github Pages deployment
+Improve internal linking
 Improved user interaction and accessibility
 
 References
