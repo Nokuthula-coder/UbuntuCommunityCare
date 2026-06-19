@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--Website Metadata-->
+    <meta charset="utf-8" />
+    <meta name="description" content="Enquire about Ubuntu Community Care services and volunteer opportunities" />
+    <meta name="keywords" content="Ubuntu Community Care, volunteer, donation,community support, services" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <!--Page Title--> 
+
+    <title>Enquiries |Ubuntu Community Care</title>
+
+    <!--External CSS Stylesheet-->
+    <link rel="stylesheet" href="css/style.css" />
+  
+   
+</head>
+<body>
+    <!--===== HEADER SECTION =====-->
+    <header>
+
+            <!--Organization Name and Tagline-->
+           <h1> Ubuntu Community Care </h1> 
+            
+            <!--Navigation Menu-->
+    <nav>
+        <ul>
+                <img src="images/logo.jpg" alt="Ubuntu Community Care Logo" width="30" />  
+       
+                <a href="index.html">Home</a> 
+                <a href="about.html">About</a> 
+                <a href="programs.html">Programs</a>
+                <a href="donate.html">Donate</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="contact.html">Contact</a>
+                <a href="enquiry.html">Enquiry</a>
+        </ul>
+    </nav>
+   <header>
+
+    <!-- About Section -->
+    <main>
+
+        <section>
+
+            <h2> Make an Enquiry </h2>
+
+            <form id="enquiryForm">
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="enquiry type">Enquiry Type:</label>
+                <select id="enquiry type" name="enquiry type" required>
+                    <option value="">Select an option</option>
+                    <option value="general">Food Support</option>
+                    <option value="volunteer">Volunteer Opportunity</option>
+                    <option value="donation">Donation Information</option>
+                    <option value="donation">General Information</option>
+                </select>
+
+                <button type="submit">Submit Enquiry</button>
+
+            </form>
+
+            <p id="response"></p>
+
+            </section>
+
+            <script src="js/script.js"></script>
+
+
+
+
+</body>
+</html>
