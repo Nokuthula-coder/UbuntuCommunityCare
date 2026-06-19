@@ -136,6 +136,16 @@ img{
     }
 }
 
+.gallery{
+    width:300px
+    cursor: pointer;
+    transaition: 0.3s;
+}
+
+.gallery:hover{
+    transform: scale(1.05);
+}
+
 main{
     padding: 20px;
 }
@@ -162,3 +172,4 @@ section{
     width: 100%;
     }
 }
+
