@@ -144,6 +144,11 @@ Version 1.3
 Added hover effects
 Improved typography
 Updated spacing and layout
+Version 1.4
+Implemented dynamic program loading using JavaScript
+Added search functionality to filter community programs
+Improved user interaction through DOM manipulation and dynamic content rendering
+
 Version 2.0
 Ehnancements
 Added JavaScript from validation
