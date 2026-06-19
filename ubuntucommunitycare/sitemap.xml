@@ -3,27 +3,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
    <url>
-      <loc>https://ubuntucommunitycare.org/index.html</loc>
+      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/</loc>
    </url>
 
    <url>
-      <loc>https://ubuntucommunitycare.org/about.html</loc>
+      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/about.html</loc>
    </url>
 
    <url>
-      <loc>https://ubuntucommunitycare.org/programs.html</loc>
+      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/programs.html</loc>
    </url>
 
    <url>
-      <loc>https://ubuntucommunitycare.org/volunteer.html</loc>
+      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/volunteer.html</loc>
    </url>
 
    <url>
-      <loc>https://ubuntucommunitycare.org/donate.html</loc>
+      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/donate.html</loc>
+
+   </url>
+
+
+   <url>
+      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/enquiry.html</loc>
+
    </url>
 
    <url>
-      <loc>https://ubuntucommunitycare.org/contact.html</loc>
+      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/contact.html</loc>
+
    </url>
 
+
+   <url>
+      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/gallery.html</loc>
+
+   </url>
    </urlset>
