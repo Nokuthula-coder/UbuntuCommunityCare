@@ -50,22 +50,7 @@ if (searchInput) {
     });
 
 
-    document.getElementById("searchInput").addEventListener("keyup", function(event) {
-        let filter = this.value.toLowerCase();
-        let items = document.querySelectorAll("#programList li");
-
-        items.forEach(function(item) {
-
-           if (item.textContent.toLowerCase().includes(filter)) {
-            item.style.display = "";
-           } 
-           else {
-                item.style.display = "none";
-           }
-
-        });
-    });
-            
+     
         const accordions = document.querySelectorAll(".accordion");
 
         accordions.forEach(item => {
@@ -84,4 +69,80 @@ if (searchInput) {
 
     });
 
+    function openLightbox(src){
 
+        document.getElementById("lightbox").style.display = "block";
+
+        document.getElementById("lightbox-image").src = src;
+    }
+
+    function closeLightbox(){
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+
+        let filter = this.value.toLowerCase();
+
+        let programs = document.querySelectorAll("#programList li");
+
+
+        programs.forEach(function(item) {
+
+            if (item.textContent.toLowerCase().includes(filter)) {
+                item.style.display = "";
+            }
+            else {
+                item.style.display = "none";
+            }
+        });
+    });
+          
+    const programs = [
+        {
+            name:"Food Distribution",
+            description:"Providing food parcelsto families in need."
+        },
+
+        {
+            name:"Youth Development",
+            description:"Supporting the growth and skills development of young people."
+        },
+
+        {
+            name:"Education Support",
+            description:"Providing educational support and learning opportunities."
+        },
+
+        {
+            name:"Community Outreach",
+            description:"Community uplifting and awareness campaigns ."
+        }
+    ];
+
+    function displayPrograms(programList) {
+
+        let output ="";
+        programList.forEach(program => {
+            output += `<div class="program-card">
+            <h3>${program.name}</h3>
+            <p>${program.description}</p>
+            </div>`;
+        });
+
+        document.getElementById("programContanier").innerHTML = output;
+
+    }
+
+    displayPrograms(programs);
+
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+
+        const searchValue = this.value.toLowerCase();
+
+        const filteredPrograms = programs.filter(program =>
+            program.name.toLowerCase().includes(searchValue) ||
+            program.description.toLowerCase().includes(searchValue)
+        );
+        
