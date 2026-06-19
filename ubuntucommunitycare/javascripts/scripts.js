@@ -14,7 +14,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
 
     document.getElementById("response").innerHTML = 
     "Thank you " + name + 
-    ", your enquiry has been received."; // Display success message if all fields are filled
+    ", your enquiry has been received. We will contact you soon."; // Display success message if all fields are filled
 
 });
 
@@ -66,5 +66,22 @@ if (searchInput) {
         });
     });
             
-        
+        const accordions = document.querySelectorAll(".accordion");
+
+        accordions.forEach(item => {
+            item.addEventListener("click", () => {
+
+
+            const panel = item.nextElementSibling;
+            
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } 
+            else {
+                panel.style.display = "block";
+            }
+        });
+
+    });
+
 
