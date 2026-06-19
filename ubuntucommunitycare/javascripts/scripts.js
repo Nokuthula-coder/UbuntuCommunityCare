@@ -2,9 +2,13 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
 
     event.preventDefault(); // Prevent the default form submission behavior
 
+    const enquiry = document.getElementById("enquiryType").value;
+
+    
     // Get form values
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
 
     if(name === "" || email === "" || message === "") {
         alert("Please complete all required fields.");
@@ -12,11 +16,29 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
 
     }
 
-    document.getElementById("response").innerHTML = 
-    "Thank you " + name + 
-    ", your enquiry has been received. We will contact you soon."; // Display success message if all fields are filled
+    let response ="";
+     if (enquiry === "volunteer") {
+        response = "Thank you for your interest in volunteering. Our team will contact you within 48 hours.";
+    }
 
-});
+    else if (enquiry === "sponsor") {
+        response = "Thank you for your interest in sponsoring our programs. Sponsorship packages are available.";
+    }
+
+    else if (enquiry === "donate") {
+        response = "Thank you for your donation enquiry. Donation details will be emailed to you";
+    }
+    else if (enquiry === "community program") {
+        response = "Thank you for your interest in our community programs. We will provide more information soon.";
+
+    }
+    else{
+        response = "Thank you " + name + ", your enquiry has been received. We will contact you soon.";
+    }
+
+    document.getElementById("enquiryResponse").innerHTML = response;
+
+
 
 const searchInput = document.getElementById("searchInput");
 
@@ -44,7 +66,22 @@ if (searchInput) {
 
         event.preventDefault();
 
-        alert("Message sent successfully! We will get back to you soon.");
+        const name = document.getElementById("fullName").value.trim();
+
+        const email = document.getElementById("email").value.trim();
+
+        const type = document.getElementById("messageType").value.trim();
+
+        const message = document.getElementById("contactMessage").value.trim();
+
+        
+
+        window.location.href = `mailto:info@ubuntucommunitycare.org?subject=${type}&body=
+        Name:${name}
+        Email:${email}
+        Message:${message}`;
+
+       
 
 
     });
@@ -146,3 +183,71 @@ if (searchInput) {
             program.description.toLowerCase().includes(searchValue)
         );
         
+document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    const enquiry = document.getElementById("enquiryType").value;
+
+    
+    // Get form values
+    let phone = document.getElementById("phone").value.trim();
+
+    let error= document.getElementById("errorMessage");
+
+    error.innerHTML = ""; // Clear previous error messages
+
+    if (phone.length !== 10 || !/^\d+$/.test(phone)) {
+        error.innerHTML = "Please enter a valid 10-digit phone number.";
+        return; // Stop further execution if phone number is invalid
+    }
+
+    alert("Enquiry submitted successfully!");
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    let message = document.getElementById("contactMessage").value.trim();
+
+    let error = document.getElementById("contactErrorMessage");
+
+    error.innerHTML = ""; // Clear previous error messages
+
+    if (message.length < 20) {
+        event.preventDefault(); // Prevent form submission
+
+        error.innerHTML = "Please enter a message with at least 20 characters.";
+        return; // Stop further execution if message is too short
+    }
+
+    alert("Message submitted successfully!");
+});
+
+document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+
+            name: document.getElementById("name").value,
+
+            email: document.getElementById("email").value,
+            
+        })
+    })
+    .then(response => response.json())
+
+    .then(data => {
+
+        alert("Enquiry submitted successfully!");
+    })
+    .catch(error => {
+        
+        alert("Failed to submit enquiry. Please try again.");
+       
+    });
+});
