@@ -144,6 +144,17 @@ Version 1.3
 Added hover effects
 Improved typography
 Updated spacing and layout
+Version 2.0
+Ehnancements
+Added JavaScript from validation
+Added enquiry form
+Added search functionality
+Added responsive image gallery
+Added SEO meta tags
+Added robots.txt
+Added sitemap.xml
+Enabled Github Pages deployment
+Improved user interaction and accessibility
 
 References
 W3Schools. (2026). Available at: https://www.w3schools.com/
