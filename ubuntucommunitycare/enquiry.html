@@ -52,7 +52,7 @@
 
             <h2> Make an Enquiry </h2>
 
-            <form id="enquiryForm">
+            <form id="enquiryForm" action="#" method="post">
 
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="Full Name" required />
@@ -60,26 +60,34 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="Email Address" required />
 
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="Phone Number" pattern="[0-9]{10}" required />
+
                 <label for="enquiry type">Enquiry Type:</label>
                 <select id="enquiry type" name="enquiry type" required>
                     <option value="">Select an option</option>
-                    <option value="general">Food Support</option>
-                    <option value="volunteer">Volunteer Opportunity</option>
-                    <option value="donation">Donation </option>
-                    <option value="donation">General Information</option>
+                    <option value="volunteer">Volunteer</option>
+                    <option value="sponsor">Sponsor</option>
+                    <option value="donate">Donate</option>
+                    <option value="community program">Community Program</option>
+                    
                 </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="Message" required></textarea> 
 
                 <button type="submit">Submit Enquiry</button>
 
+                <p id="errorMessage"></p>
+            
+
             </form>
 
-            <p id="response"></p>
+            <p id=" enquiryResponse"></p>
 
             </section>
 
-            <script src="js/script.js"></script>
-
-
+            
 
 
 </body>
