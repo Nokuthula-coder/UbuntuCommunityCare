@@ -136,10 +136,30 @@ img{
     }
 }
 
-.gallery{
-    width:300px
+.gallery img{
+    width:250px
     cursor: pointer;
+    margin: 10px;
     transaition: 0.3s;
+}
+
+#lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img{
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 50px;
+    border-radius: 10px;
 }
 
 .gallery:hover{
@@ -172,4 +192,39 @@ section{
     width: 100%;
     }
 }
+.accordion {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
 
+.panel {
+  padding: 18px;
+  display: none;
+  background-color: rgba(14, 9, 9, 0.84);
+  
+}
+
+.program-card{
+    background-color: rgba(14, 9, 9, 0.84);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#searchInput{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
