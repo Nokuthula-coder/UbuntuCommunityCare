@@ -76,19 +76,24 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="Message" required></textarea> 
 
-                <button type="submit">Submit Enquiry</button>
+                <button type="submit" onclick="submitEnquiry()">Submit Enquiry</button>
 
                 <p id="errorMessage"></p>
             
 
             </form>
 
-            <p id=" enquiryResponse"></p>
+            <p id="enquiryResponse"> </p>
+      
 
             </section>
 
-            
-
-
+  
+<script>
+        
+function submitEnquiry() {
+  document.getElementById("enquiryResponse").innerHTML = "Thank you " + document.getElementById("name").value + ", your enquiry has been received. We will contact you soon.";
+}
+</script>  
 </body>
 </html>
