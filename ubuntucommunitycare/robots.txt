@@ -1,5 +1,5 @@
 User-agent : *
 Allow :/
 
-Sitemap: https://nokuthula-coder.github.io/UbuntuCommunityCare/Sitemap.xml
+Sitemap:/ubuntu-community-care.netlify.app/Sitemap.xml
 
