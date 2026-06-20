@@ -135,15 +135,20 @@ img{
         gap: 10px;
     }
 }
-
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
 .gallery img{
-    width:250px
+    width:150px
     cursor: pointer;
     margin: 10px;
     transaition: 0.3s;
 }
 
-#lightbox{
+.lightbox{
     position: fixed;
     top: 0;
     left: 0;
@@ -153,9 +158,18 @@ img{
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
-
-#lightbox img{
+.lightbox-content{
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+.lightbox img{
     max-width: 90%;
     max-height: 80%;
     margin-top: 50px;
