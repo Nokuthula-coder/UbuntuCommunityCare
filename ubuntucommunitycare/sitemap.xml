@@ -3,40 +3,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
    <url>
-      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/</loc>
+      <loc>https://ubuntu-community-care.netlify.app/</loc>
+      <priority>1.0</priority>
    </url>
 
    <url>
-      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/about.html</loc>
+      <loc>https://ubuntu-community-care.netlify.app/about.html</loc>
+      <priority>0.8</priority>
    </url>
 
    <url>
-      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/programs.html</loc>
+      <loc>https://ubuntu-community-care.netlify.app/programs.html</loc>
+      <priority>0.8</priority>
    </url>
 
    <url>
-      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/volunteer.html</loc>
+      <loc>https://ubuntu-community-care.netlify.app/volunteer.html</loc>
+      <priority>0.8</priority>
    </url>
 
    <url>
-      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/donate.html</loc>
-
-   </url>
-
-
-   <url>
-      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/enquiry.html</loc>
-
-   </url>
-
-   <url>
-      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/contact.html</loc>
-
+      <loc>https://ubuntu-community-care.netlify.app/donate.html</loc>
+      <priority>0.8</priority>
    </url>
 
 
    <url>
-      <loc>https://nokuthula-coder.github.io/UbuntuCommunityCare/gallery.html</loc>
+      <loc>https://ubuntu-community-care.netlify.app/enquiry.html</loc>
+         <priority>0.8</priority>
+   </url>
 
+   <url>
+      <loc>https://ubuntu-community-care.netlify.app/contact.html</loc>
+      <priority>0.8</priority>
+   </url>
+
+
+   <url>
+      <loc>https://ubuntu-community-care.netlify.app/gallery.html</loc>
+      <priority>0.8</priority>s
    </url>
    </urlset>
