@@ -135,50 +135,67 @@ img{
         gap: 10px;
     }
 }
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-.gallery img{
-    width:150px
-    cursor: pointer;
-    margin: 10px;
-    transaition: 0.3s;
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-.lightbox{
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
     position: fixed;
-    top: 0;
+    z-index: 9999;
+    padding-top: 60px;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    background: rgba(0,0,0,0.9);
 }
-.lightbox-content{
-    position: absolute;
-    text-align: center;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-}
-.lightbox img{
+
+.lightbox-content {
+    display: block;
+    margin: auto;
     max-width: 90%;
-    max-height: 80%;
-    margin-top: 50px;
+    max-height: 80vh;
     border-radius: 10px;
 }
 
-.gallery:hover{
-    transform: scale(1.05);
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
+
+.close:hover {
+    color: #ccc;
+}
+
+
 
 main{
     padding: 20px;
@@ -241,4 +258,17 @@ section{
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.error{
+    color: red;
+    font-size: 13px;
+    display: block;
+    margin-top: 4px;
+}
+input:invalid, select: invalid, textarea: invalid{
+    border: 2px solid #ff9999;
+}
+input:valid, select: valid, textarea: valid{
+    border: 2px solid #99ff99;
 }
