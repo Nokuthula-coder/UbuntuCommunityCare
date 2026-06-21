@@ -19,7 +19,7 @@
     <!--External CSS Stylesheet-->
     <link rel="stylesheet" href="css/style.css" />
   <!--External JavaScript File-->
-   <script src="javascripts/script.js" ></script>
+   <script src="javascript/script.js" ></script>
    
 </head>
 <body>
@@ -27,7 +27,7 @@
     <header>
 
             <!--Organization Name and Tagline-->
-           <h1> Ubuntu Community Care </h1> 
+           <h1> Enquiry About Ubuntu Community Care </h1> 
             
             <!--Navigation Menu-->
     <nav>
@@ -52,16 +52,16 @@
 
             <h2> Make an Enquiry </h2>
 
-            <form id="enquiryForm" action="#" method="post">
+            <form id="enquiryForm" action="https://formspree.io/f/meebjadj" method="post">
 
                 <label for="name">Full Name:</label>
-                <input type="text" id="name" name="Full Name" required />
+                <input type="text" id="name" name="Full Name" required minlength="3" maxlength="50"/>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="Email Address" required />
+                <input type="email" id="email" name="Email Address" required /> <!--HTML5 email validation-->
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="Phone Number" pattern="[0-9]{10}" required />
+                <input type="tel" id="phone" name="Phone Number" pattern="[0-9]{10}" required /> <!----HTML5 pattern for phone-->
 
                 <label for="enquiry type">Enquiry Type:</label>
                 <select id="enquiry type" name="enquiry type" required>
@@ -74,7 +74,7 @@
                 </select>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="Message" required></textarea> 
+                <textarea id="message" name="Message" required minlength="10" maxlength="500"></textarea> <!----textarea with length-->
 
                 <button type="submit" onclick="submitEnquiry()">Submit Enquiry</button>
 
@@ -83,7 +83,7 @@
 
             </form>
 
-            <p id="enquiryResponse"> </p>
+            <div id="enquiryResponse"> </div>
       
 
             </section>
@@ -94,6 +94,25 @@
 function submitEnquiry() {
   document.getElementById("enquiryResponse").innerHTML = "Thank you " + document.getElementById("name").value + ", your enquiry has been received. We will contact you soon.";
 }
-</script>  
+</script> 
+
+<!-- Footer Section -->
+     <footer>
+         <address>
+        <strong> Ubuntu Community Care</strong><br>
+        Siyabuswa, Mpumalanga, South Africa<br>
+        Phone: 012 567 6768 <br>
+        Email: info@ubuntucommunitycare.org<br>
+
+        <a href="https://www.facebook.com/profile.php?id=61591191988909" target ="_blank">Share on Facebook</a>
+        <a href ="https://twitter.com/intent/tweet?text=Ubuntu Community Care Siyabuswa" target="_blank">Share on Twitter</a>
+
+    </address>
+           
+        <p>&copy; 2024 Ubuntu Community Care. All rights reserved. | Privacy Policy | Terms of Service</p>
+
+        </footer>
+ 
+
 </body>
 </html>
