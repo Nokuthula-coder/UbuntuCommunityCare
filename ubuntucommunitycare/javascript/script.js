@@ -108,22 +108,30 @@ if (searchInput) {
 
     });
 
+const galleryImages = document.querySelectorAll(".gallery-container img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
 
+galleryImages.forEach(image => {
+    image.addEventListener("click", () => {
+        lightbox.style.display = "block";
+        lightboxImg.src = image.src;
+        lightboxImg.alt = image.alt;
+    });
+});
 
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
 
-
-
-
-    function openLightbox(src){
-
-        document.getElementById("lightbox").style.display = "block";
-
-        document.getElementById("lightbox-image").src = src;
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
     }
+});
 
-    function closeLightbox(){
-        document.getElementById("lightbox").style.display = "none";
-    }
+   
 
 
     document.getElementById("searchInput").addEventListener("keyup", function() {
@@ -189,7 +197,10 @@ if (searchInput) {
         const filteredPrograms = programs.filter(program =>
             program.name.toLowerCase().includes(searchValue) ||
             program.description.toLowerCase().includes(searchValue)
+
         );
+
+
         
 document.getElementById("enquiryForm").addEventListener("submit", function(event) {
 
@@ -231,31 +242,40 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     alert("Message submitted successfully!");
 });
 
-document.getElementById("enquiryForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
 
-        body: JSON.stringify({
+async  function submitFormAJAX(form){
+    const statusDiv = document.getElementById("enquiryResponse");
+    statusDiv.textContent = "Sending---";
+    statusDiv.style.color = "blue";
 
-            name: document.getElementById("name").value,
+    const formData = new FormData(form); // collects all form data
 
-            email: document.getElementById("email").value,
-            
-        })
-    })
-    .then(response => response.json())
+    try{
+        const response = await fetch(form.action, {
+             method: form.method,
+             body: formData,
+            headers: {
+            "Accept": "application/json"
 
-    .then(data => {
-
-        alert("Enquiry submitted successfully!");
-    })
-    .catch(error => {
-        
-        alert("Failed to submit enquiry. Please try again.");
-       
+        }
     });
-});
+
+    if (response.ok){
+        // Success- show message without reload
+         statusDiv.textContent = "Thank you! your enquiry was sent. Ubuntu Community Care will contact you soon.";
+        statusDiv.style.color ="green";
+        form.reset(); // clear form
+    } else{
+        statusDiv.textContent = "Oops! Something went wrong. Please try again.";
+        statusDiv.style.color = "red";
+    }
+} catch (error){
+    statusDiv.textContent = "Network error. Please check your connection.";
+    statusDiv.style.color = "red";
+
+}
+
+
+
+
+
