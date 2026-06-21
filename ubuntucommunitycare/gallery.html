@@ -15,7 +15,7 @@
     <!--External CSS Stylesheet-->
     <link rel="stylesheet" href="css/style.css" />
 <!--External JavaScript File-->
-   <script src="javascripts/script.js" ></script>
+   <script src="javascript/script.js" ></script>
 </head>
 
 <body>
@@ -51,39 +51,56 @@
 <section>
     <h2>Community Gallery</h2>
 
-    <div class="gallery">
+    <div class="gallery-container">
 
-        <img src="images/food-distribution.jpg"  alt="Food parcel Distribution" class="gallery-img"
-       onclick="openLightbox(this.src)">
-        
-
-        <img src="images/education-support.jpg"  alt="Education Support" class="gallery-img"
-        onclick="openLightbox(this.src)">
-
-        <img src="images/community-volunteers.jpg"  alt="Community Volunteers" class="gallery-img"
-        onclick="openLightbox(this.src)">
-
-        <img src="images/community-outreach.jpg"  alt="Community Development" class="gallery-img"
-        onclick="openLightbox(this.src)">
+        <img src="images/food-distribution.jpg"  alt="Food parcel Distribution">
+        <img src="images/programs 3.jpg "alt="Education Afternoon Session">
+         <img src="images/Stationary.jpg" alt="Education Stationery Support">
+        <img src="images/hero .jpg" alt="Food parcel Distribution">
+        <img src ="images/community event.jpg" alt="Community Event">
+        <img src="images/food packages.jpg" alt="Food packages">
+        <img src="images/education-support.jpg"  alt="Education Support">
+        <img src="images/communitY.jpg "alt="Community Support" >
+        <img src="images/community-volunteers.jpg"  alt="Community Volunteers" >
+        <img src="images/donation-support.jpg" alt="Donation Support" >
+        <img src="images/events.jpg" alt="Events">
+        <img src="images/community cleaning campaign.jpg" alt="Clean up Campaigns">
+        <img src="images/training program.jpg" alt="Youth Empowerment">
+        <img src="images/training skills program.jpg" alt="Skills Development Training ">
+        <img src="images/community-outreach.jpg"  alt="Community Development" >
 
 
     </div>
     
        
-</section>
+<!----Lightbox modal-->
 
-<div id="lightbox">
-
-    <span onclick="closeLightbox()">
-
-    </span>
-
-    <img id="lightbox-image">
-
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
 
 </div>
+</section>
 
+<!-- Footer Section -->
+     <footer>
+         <address>
+        <strong> Ubuntu Community Care</strong><br>
+        Siyabuswa, Mpumalanga, South Africa<br>
+        Phone: 012 567 6768 <br>
+        Email: info@ubuntucommunitycare.org<br>
 
+        <a href="https://www.facebook.com/profile.php?id=61591191988909" target ="_blank">Share on Facebook</a>
+        <a href ="https://twitter.com/intent/tweet?text=Ubuntu Community Care Siyabuswa" target="_blank">Share on Twitter</a>
+
+    </address>
+           
+        <p>&copy; 2024 Ubuntu Community Care. All rights reserved. | Privacy Policy | Terms of Service</p>
+
+        </footer>
+ 
+</body>
+</html>
 
 
 
